@@ -1,0 +1,21 @@
+{
+  "name": "language-structureed-text",
+  "version": "0.0.0",
+  "description": "Structured Text language highlighting and snippets in Atom",
+  "engines": {
+    "atom": ">=1.0.0"
+  },
+  "keywords": [
+    "syntax",
+    "highlighting",
+    "grammar",
+    "snippets"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/E-Renshaw/language-structured-text"
+  },
+  "bugs": {
+    "url": "https://github.com/E-Renshaw/language-structured-text/issues"
+  }
+}

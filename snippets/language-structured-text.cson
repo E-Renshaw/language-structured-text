@@ -1,0 +1,87 @@
+'.source.structured-text':
+  'PROGRAM':
+    'prefix': 'PROGRAM'
+    'body': """
+      PROGRAM
+        $1
+      END_PROGRAM;
+    """
+  'Comment':
+    'prefix': '//'
+    'body': '// $1'
+  'Multiline comment':
+    'prefix': '/*'
+    'body': """
+      /*
+      $1
+      */
+    """
+  'Multiline comment (alt)':
+    'prefix': '(*'
+    'body': """
+      (*
+      $1
+      *)
+    """
+  'IF...THEN':
+    'prefix': 'IF'
+    'body': """
+      IF $1 THEN
+        $2;
+      END_IF;
+    """
+  'ELSEIF...THEN':
+    'prefix': 'ELSEIF'
+    'body': """
+      ELSEIF $1 THEN
+        $2;
+      """
+  'ELSE':
+    'prefix': 'ELSE'
+    'body': """
+      ELSE
+        $1;
+      """
+  'CASE...OF':
+    'prefix': 'CASE'
+    'body': """
+      CASE $1 OF
+        $2: $3;
+      END_CASE;
+    """
+  'FOR...TO...DO':
+    'prefix': 'FOR'
+    'body': """
+      FOR $1 := $2 TO $3 BY $4 DO
+        $5;
+      END_FOR;
+    """
+  'WHILE...DO':
+    'prefix': 'WHILE'
+    'body': """
+      WHILE $1 DO
+        $2;
+      END_WHILE;
+    """
+  'REPEAT...Until':
+    'prefix': 'REPEAT'
+    'body': """
+      REPEAT
+        $1;
+      UNTIL $2
+      END_REPEAT
+    """
+  'VAR...END_VAR':
+    'prefix': 'VAR'
+    'body': """
+      VAR
+        $1 : $2;
+      END_VAR
+    """
+  'TYPE...END_TYPE':
+    'prefix': 'TYPE'
+    'body': """
+      TYPE
+        $1
+      END_TYPE
+    """

@@ -1,0 +1,253 @@
+'scopeName': 'source.structured-text'
+'fileTypes': [ 'st' ]
+'name': 'Structured Text'
+'patterns': [
+  {
+    'name': 'comment.line.structured-text'
+    'match': '//.*$'
+  }
+  {
+    'name': 'comment.multiline.slash.structured-text'
+    'begin': '/\\*'
+    'captures':
+      '0':
+        'name': 'punctuation.definition.comment.structured-text'
+    'end': '\\*/'
+  }
+  {
+    'name': 'comment.multiline.bracket.structured-text'
+    'begin': '(\\*'
+    'captures':
+      '0':
+        'name': 'punctuation.definition.comment.structured-text'
+    'end': '\\*)'
+  }
+  {
+    'name': 'datatype.elementary.integer.sint.structured-text'
+    'match': '\\bSINT\\b'
+  }
+  {
+    'name': 'datatype.elementary.integer.int.structured-text'
+    'match': '\\bINT\\b'
+  }
+  {
+    'name': 'datatype.elementary.integer.dint.structured-text'
+    'match': '\\bDINT\\b'
+  }
+  {
+    'name': 'datatype.elementary.integer.lint.structured-text'
+    'match': '\\bLINT\\b'
+  }
+  {
+    'name': 'datatype.elementary.integer.usint.structured-text'
+    'match': '\\bUSINT\\b'
+  }
+  {
+    'name': 'datatype.elementary.integer.uint.structured-text'
+    'match': '\\bUINT\\b'
+  }
+  {
+    'name': 'datatype.elementary.integer.ldint.structured-text'
+    'match': '\\bLDINT\\b'
+  }
+  {
+    'name': 'datatype.elementary.integer.ldint.structured-text'
+    'match': '\\bLDINT\\b'
+  }
+  {
+    'name': 'datatype.elementary.float.real.structured-text'
+    'match': '\\bREAL\\b'
+  }
+  {
+    'name': 'datatype.elementary.float.lreal.structured-text'
+    'match': '\\bLREAL\\b'
+  }
+  {
+    'name': 'datatype.elementary.time.time.structured-text'
+    'match': '\\bTIME\\b'
+  }
+  {
+    'name': 'datatype.elementary.time.date.structured-text'
+    'match': '\\bDATE\\b'
+  }
+  {
+    'name': 'datatype.elementary.time.time_of_day.structured-text'
+    'match': '\\bTIME_OF_DAY\\b'
+  }
+  {
+    'name': 'datatype.elementary.time.date_and_time.structured-text'
+    'match': '\\bDATE_AND_TIME\\b'
+  }
+  {
+    'name': 'datatype.elementary.string.structured-text'
+    'match': '\\bSTRING\\b'
+  }
+  {
+    'name': 'datatype.elementary.bitstring.bool.structured-text'
+    'match': '\\bBOOL\\b'
+  }
+  {
+    'name': 'datatype.elementary.bitstring.byte.structured-text'
+    'match': '\\bBYTE\\b'
+  }
+  {
+    'name': 'datatype.elementary.bitstring.word.structured-text'
+    'match': '\\bWORD\\b'
+  }
+  {
+    'name': 'datatype.elementary.bitstring.dword.structured-text'
+    'match': '\\bDWORD\\b'
+  }
+  {
+    'name': 'datatype.elementary.bitstring.lword.structured-text'
+    'match': '\\bLWORD\\b'
+  }
+  {
+    'name': 'operator.arithmetic.plus.structured-text'
+    'match': '\\+'
+  }
+  {
+    'name': 'operator.arithmetic.minus.structured-text'
+    'match': '-'
+  }
+  {
+    'name': 'operator.arithmetic.times.structured-text'
+    'match': '\\*'
+  }
+  {
+    'name': 'operator.arithmetic.divide.structured-text'
+    'match': '/'
+  }
+  {
+    'name': 'operator.arithmetic.exponent.structured-text'
+    'match': '\\*\\*'
+  }
+  {
+    'name': 'operator.arithmetic.modulo.structured-text'
+    'match': '\\bMOD\\b'
+  }
+  {
+    'name': 'operator.relational.equals.structured-text'
+    'match': '='
+  }
+  {
+    'name': 'operator.relational.lt.structured-text'
+    'match': '<'
+  }
+  {
+    'name': 'operator.relational.lte.structured-text'
+    'match': '<='
+  }
+  {
+    'name': 'operator.relational.gt.structured-text'
+    'match': '>'
+  }
+  {
+    'name': 'operator.relational.gte.structured-text'
+    'match': '>='
+  }
+  {
+    'name': 'operator.relational.notequal.structured-text'
+    'match': '<>'
+  }
+  {
+    'name': 'operator.logical.ampersand.structured-text'
+    'match': '&'
+  }
+  {
+    'name': 'operator.logical.and.structured-text'
+    'match': '\\bAND\\b'
+  }
+  {
+    'name': 'operator.logical.or.structured-text'
+    'match': '\\bOR\\b'
+  }
+  {
+    'name': 'operator.logical.xor.structured-text'
+    'match': '\\bXOR\\b'
+  }
+  {
+    'name': 'operator.logical.not.structured-text'
+    'match': '\\bNOT\\b'
+  }
+  {
+    'name': 'operator.assignment.structured-text'
+    'match': ':='
+  }
+  {
+    'name': 'program.begin.structured-text'
+    'match': '\\bPROGRAM\\b'
+  }
+  {
+    'name': 'program.end.structured-text'
+    'match': '\\bPROGRAM_END\\b'
+  }
+  {
+    'name': 'statement.if.structured-text'
+    'match': '\\bIF\\b'
+  }
+  {
+    'name': 'statement.then.structured-text'
+    'match': '\\bTHEN\\b'
+  }
+  {
+    'name': 'statement.elseif.structured-text'
+    'match': '\\bELSEIF\\b'
+  }
+  {
+    'name': 'statement.else.structured-text'
+    'match': '\\bELSE\\b'
+  }
+  {
+    'name': 'statement.endif.structured-text'
+    'match': '\\bEND_IF\\b'
+  }
+  {
+    'name': 'statement.case.structured-text'
+    'match': '\\bCASE\\b'
+  }
+  {
+    'name': 'loop.for.structured-text'
+    'match': '\\bFOR\\b'
+  }
+  {
+    'name': 'loop.do.structured-text'
+    'match': '\\bDO\\b'
+  }
+  {
+    'name': 'loop.endfor.structured-text'
+    'match': '\\bEND_FOR\\b'
+  }
+  {
+    'name': 'loop.to.structured-text'
+    'match': '\\bTO\\b'
+  }
+  {
+    'name': 'loop.by.structured-text'
+    'match': '\\bBY\\b'
+  }
+  {
+    'name': 'loop.while.structured-text'
+    'match': '\\bWHILE\\b'
+  }
+  {
+    'name': 'loop.endwhile.structured-text'
+    'match': '\\bEND_WHILE\\b'
+  }
+  {
+    'name': 'loop.repeat.structured-text'
+    'match': '\\bREPEAT\\b'
+  }
+  {
+    'name': 'loop.until.structured-text'
+    'match': '\\bUNTIL\\b'
+  }
+  {
+    'name': 'loop.endrepeat.structured-text'
+    'match': '\\bEND_REPEAT\\b'
+  }
+  {
+    'name': 'flow.structured-text'
+    'match': '\\bEXIT\\b'
+  }
+]
