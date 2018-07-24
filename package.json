@@ -1,6 +1,6 @@
 {
-  "name": "language-structureed-text",
-  "version": "0.1.0",
+  "name": "language-structured-text",
+  "version": "0.0.0",
   "description": "Structured Text language highlighting and snippets in Atom",
   "engines": {
     "atom": ">=1.0.0"
