@@ -16,11 +16,11 @@
   }
   {
     'name': 'comment.multiline.bracket.structured-text'
-    'begin': '(\\*'
+    'begin': '\\(\\*'
     'captures':
       '0':
         'name': 'punctuation.definition.comment.structured-text'
-    'end': '\\*)'
+    'end': '\\*\\)'
   }
   {
     'name': 'datatype.elementary.integer.sint.structured-text'
