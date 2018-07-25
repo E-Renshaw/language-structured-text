@@ -1,4 +1,3 @@
-'.source.prolog':
+'.source.structured-text':
   'editor':
-    'commentStart': '% '
-    'increaseIndentPattern': '(:-|-->|->)\\s*$'
+    'commentStart': '// '
