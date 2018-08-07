@@ -1,253 +1,311 @@
-'scopeName': 'source.structured-text'
-'fileTypes': [ 'st' ]
-'name': 'Structured Text'
+'scopeName': 'source.st'
+'name': 'ST/SCL'
+'fileTypes': [
+  'scl'
+  'st'
+]
+
 'patterns': [
   {
-    'name': 'comment.line.structured-text'
-    'match': '//.*$'
+    'include': '#comment'
   }
   {
-    'name': 'comment.multiline.slash.structured-text'
-    'begin': '/\\*'
-    'captures':
-      '0':
-        'name': 'punctuation.definition.comment.structured-text'
-    'end': '\\*/'
+    'include': '#string'
   }
   {
-    'name': 'comment.multiline.bracket.structured-text'
-    'begin': '\\(\\*'
-    'captures':
-      '0':
-        'name': 'punctuation.definition.comment.structured-text'
-    'end': '\\*\\)'
+    'include': '#structure'
   }
   {
-    'name': 'datatype.elementary.integer.sint.structured-text'
-    'match': '\\bSINT\\b'
+    'include': '#declaration'
   }
   {
-    'name': 'datatype.elementary.integer.int.structured-text'
-    'match': '\\bINT\\b'
+    'include': '#statements'
   }
   {
-    'name': 'datatype.elementary.integer.dint.structured-text'
-    'match': '\\bDINT\\b'
+    'include': '#types'
   }
   {
-    'name': 'datatype.elementary.integer.lint.structured-text'
-    'match': '\\bLINT\\b'
-  }
-  {
-    'name': 'datatype.elementary.integer.usint.structured-text'
-    'match': '\\bUSINT\\b'
-  }
-  {
-    'name': 'datatype.elementary.integer.uint.structured-text'
-    'match': '\\bUINT\\b'
-  }
-  {
-    'name': 'datatype.elementary.integer.ldint.structured-text'
-    'match': '\\bLDINT\\b'
-  }
-  {
-    'name': 'datatype.elementary.integer.ldint.structured-text'
-    'match': '\\bLDINT\\b'
-  }
-  {
-    'name': 'datatype.elementary.float.real.structured-text'
-    'match': '\\bREAL\\b'
-  }
-  {
-    'name': 'datatype.elementary.float.lreal.structured-text'
-    'match': '\\bLREAL\\b'
-  }
-  {
-    'name': 'datatype.elementary.time.time.structured-text'
-    'match': '\\bTIME\\b'
-  }
-  {
-    'name': 'datatype.elementary.time.date.structured-text'
-    'match': '\\bDATE\\b'
-  }
-  {
-    'name': 'datatype.elementary.time.time_of_day.structured-text'
-    'match': '\\bTIME_OF_DAY\\b'
-  }
-  {
-    'name': 'datatype.elementary.time.date_and_time.structured-text'
-    'match': '\\bDATE_AND_TIME\\b'
-  }
-  {
-    'name': 'datatype.elementary.string.structured-text'
-    'match': '\\bSTRING\\b'
-  }
-  {
-    'name': 'datatype.elementary.bitstring.bool.structured-text'
-    'match': '\\bBOOL\\b'
-  }
-  {
-    'name': 'datatype.elementary.bitstring.byte.structured-text'
-    'match': '\\bBYTE\\b'
-  }
-  {
-    'name': 'datatype.elementary.bitstring.word.structured-text'
-    'match': '\\bWORD\\b'
-  }
-  {
-    'name': 'datatype.elementary.bitstring.dword.structured-text'
-    'match': '\\bDWORD\\b'
-  }
-  {
-    'name': 'datatype.elementary.bitstring.lword.structured-text'
-    'match': '\\bLWORD\\b'
-  }
-  {
-    'name': 'operator.arithmetic.plus.structured-text'
-    'match': '\\+'
-  }
-  {
-    'name': 'operator.arithmetic.minus.structured-text'
-    'match': '-'
-  }
-  {
-    'name': 'operator.arithmetic.times.structured-text'
-    'match': '\\*'
-  }
-  {
-    'name': 'operator.arithmetic.divide.structured-text'
-    'match': '/'
-  }
-  {
-    'name': 'operator.arithmetic.exponent.structured-text'
-    'match': '\\*\\*'
-  }
-  {
-    'name': 'operator.arithmetic.modulo.structured-text'
-    'match': '\\bMOD\\b'
-  }
-  {
-    'name': 'operator.relational.equals.structured-text'
-    'match': '='
-  }
-  {
-    'name': 'operator.relational.lt.structured-text'
-    'match': '<'
-  }
-  {
-    'name': 'operator.relational.lte.structured-text'
-    'match': '<='
-  }
-  {
-    'name': 'operator.relational.gt.structured-text'
-    'match': '>'
-  }
-  {
-    'name': 'operator.relational.gte.structured-text'
-    'match': '>='
-  }
-  {
-    'name': 'operator.relational.notequal.structured-text'
-    'match': '<>'
-  }
-  {
-    'name': 'operator.logical.ampersand.structured-text'
-    'match': '&'
-  }
-  {
-    'name': 'operator.logical.and.structured-text'
-    'match': '\\bAND\\b'
-  }
-  {
-    'name': 'operator.logical.or.structured-text'
-    'match': '\\bOR\\b'
-  }
-  {
-    'name': 'operator.logical.xor.structured-text'
-    'match': '\\bXOR\\b'
-  }
-  {
-    'name': 'operator.logical.not.structured-text'
-    'match': '\\bNOT\\b'
-  }
-  {
-    'name': 'operator.assignment.structured-text'
-    'match': ':='
-  }
-  {
-    'name': 'program.begin.structured-text'
-    'match': '\\bPROGRAM\\b'
-  }
-  {
-    'name': 'program.end.structured-text'
-    'match': '\\bPROGRAM_END\\b'
-  }
-  {
-    'name': 'statement.if.structured-text'
-    'match': '\\bIF\\b'
-  }
-  {
-    'name': 'statement.then.structured-text'
-    'match': '\\bTHEN\\b'
-  }
-  {
-    'name': 'statement.elseif.structured-text'
-    'match': '\\bELSEIF\\b'
-  }
-  {
-    'name': 'statement.else.structured-text'
-    'match': '\\bELSE\\b'
-  }
-  {
-    'name': 'statement.endif.structured-text'
-    'match': '\\bEND_IF\\b'
-  }
-  {
-    'name': 'statement.case.structured-text'
-    'match': '\\bCASE\\b'
-  }
-  {
-    'name': 'loop.for.structured-text'
-    'match': '\\bFOR\\b'
-  }
-  {
-    'name': 'loop.do.structured-text'
-    'match': '\\bDO\\b'
-  }
-  {
-    'name': 'loop.endfor.structured-text'
-    'match': '\\bEND_FOR\\b'
-  }
-  {
-    'name': 'loop.to.structured-text'
-    'match': '\\bTO\\b'
-  }
-  {
-    'name': 'loop.by.structured-text'
-    'match': '\\bBY\\b'
-  }
-  {
-    'name': 'loop.while.structured-text'
-    'match': '\\bWHILE\\b'
-  }
-  {
-    'name': 'loop.endwhile.structured-text'
-    'match': '\\bEND_WHILE\\b'
-  }
-  {
-    'name': 'loop.repeat.structured-text'
-    'match': '\\bREPEAT\\b'
-  }
-  {
-    'name': 'loop.until.structured-text'
-    'match': '\\bUNTIL\\b'
-  }
-  {
-    'name': 'loop.endrepeat.structured-text'
-    'match': '\\bEND_REPEAT\\b'
-  }
-  {
-    'name': 'flow.structured-text'
-    'match': '\\bEXIT\\b'
+    'include': '#constants'
   }
 ]
+
+'repository':
+  'comment':
+    'patterns': [
+      {
+        'begin': '\\(\\*'
+        'end': '\\*\\)'
+        'name': 'comment.block.st'
+      }
+      {
+        'match': '//.*$'
+        'name': 'comment.line.double-slash.st'
+      }
+    ]
+
+  'structure':
+    'patterns': [
+      {
+        'begin': '(?i)\\s*(ORGANIZATION_BLOCK)\\s+(\\b[A-Z_]+\\w{0,23}\\b)(.*)$'
+        'beginCaptures':
+          '1':
+            'name': 'storage.type.function.st'
+          '2':
+            'name': 'entity.name.function.st'
+          '3':
+            'patterns': [
+              {
+                'include': '#comment'
+              }
+            ]
+        'end': '(?i)\\s*(END_ORGANIZATION_BLOCK)(.*)$'
+        'endCaptures':
+          '1':
+            'name': 'storage.type.function.st'
+          '2':
+            'patterns': [
+              {
+                'include': '#comment'
+              }
+            ]
+        'name': 'meta.organization-block.st'
+        'patterns': [
+          'include': '$self'
+        ]
+      }
+      {
+        'begin': '(?i)\\s*(FUNCTION)\\s+(\\b[A-Z_]+\\w{0,23}\\b)(\\s*(:)\\s*(\\b[A-Z_]+\\w{0,23}\\b))?\\s*(.*)$'
+        'beginCaptures':
+          '1':
+            'name': 'storage.type.function.st'
+          '2':
+            'name': 'entity.name.function.st'
+          #'4':
+            #'name': 'storage.type.st'
+          '5':
+            'name': 'storage.type.st'
+          '6':
+            'patterns': [
+              {
+                'include': '#comment'
+              }
+            ]
+        'end': '(?i)\\s*(END_FUNCTION)(.*)$'
+        'endCaptures':
+          '1':
+            'name': 'storage.type.function.st'
+          '2':
+            'patterns': [
+              {
+                'include': '#comment'
+              }
+            ]
+        'name': 'meta.function.st'
+        'patterns': [
+          'include': '$self'
+        ]
+      }
+      {
+        'begin': '(?i)\\s*(FUNCTION_BLOCK)\\s+(\\b[A-Z_]+\\w{0,23}\\b)(.*)$'
+        'beginCaptures':
+          '1':
+            'name': 'storage.type.function.st'
+          '2':
+            'name': 'entity.name.function.st'
+          '3':
+            'patterns': [
+              {
+                'include': '#comment'
+              }
+            ]
+        'end': '(?i)\\s*(END_FUNCTION_BLOCK)(.*)$'
+        'endCaptures':
+          '1':
+            'name': 'storage.type.function.st'
+          '2':
+            'patterns': [
+              {
+                'include': '#comment'
+              }
+            ]
+        'name': 'meta.function-block.st'
+        'patterns': [
+          'include': '$self'
+        ]
+      }
+      {
+        'begin': '(?i)\\s*(DATA_BLOCK)\\s+(\\b[A-Z_]+\\w{0,23}\\b)(.*)$'
+        'beginCaptures':
+          '1':
+            'name': 'storage.type.function.st'
+          '2':
+            'name': 'entity.name.function.st'
+          '3':
+            'patterns': [
+              {
+                'include': '#comment'
+              }
+            ]
+        'end': '(?i)\\s*(END_DATA_BLOCK)(.*)$'
+        'endCaptures':
+          '1':
+            'name': 'storage.type.function.st'
+          '2':
+            'patterns': [
+              {
+                'include': '#comment'
+              }
+            ]
+        'name': 'meta.data-block.st'
+        'patterns': [
+          'include': '$self'
+        ]
+      }
+      {
+        'begin': '(?i)\\s*(TYPE)\\s+(\\b[A-Z_]+\\w{0,23}\\b)(.*)$'
+        'beginCaptures':
+          '1':
+            'name': 'storage.type.function.st'
+          '2':
+            'name': 'entity.name.function.st'
+          '3':
+            'patterns': [
+              {
+                'include': '#comment'
+              }
+            ]
+        'end': '(?i)\\s*(END_TYPE)(.*)$'
+        'endCaptures':
+          '1':
+            'name': 'storage.type.function.st'
+          '2':
+            'patterns': [
+              {
+                'include': '#comment'
+              }
+            ]
+        'name': 'meta.type.st'
+        'patterns': [
+          'include': '$self'
+        ]
+      }
+    ]
+
+  'declaration':
+    'patterns': [
+      {
+        'begin': '(?i)\\s*(CONST)(.*)$'
+        'beginCaptures':
+          '1':
+            'name': 'storage.type.constant.st'
+          '2':
+            'patterns': [
+              {
+                'include': '#comment'
+              }
+            ]
+        'end': '(?i)\\s*(END_CONST)(.*)$'
+        'endCaptures':
+          '1':
+            'name': 'storage.type.constant.st'
+          '2':
+            'patterns': [
+              {
+                'include': '#comment'
+              }
+            ]
+        'name': 'meta.declaration.st'
+        'patterns': [
+          'include': '$self'
+        ]
+      }
+      {
+        'begin': '(?i)\\s*(LABEL)(.*)$'
+        'beginCaptures':
+          '1':
+            'name': 'storage.type.label.st'
+          '2':
+            'patterns': [
+              {
+                'include': '#comment'
+              }
+            ]
+        'end': '(?i)\\s*(END_LABEL)(.*)$'
+        'endCaptures':
+          '1':
+            'name': 'storage.type.label.st'
+          '2':
+            'patterns': [
+              {
+                'include': '#comment'
+              }
+            ]
+        'name': 'meta.declaration.st'
+        'patterns': [
+          'include': '$self'
+        ]
+      }
+      {
+        'begin': '(?i)\\s*(VAR(_TEMP|_INPUT|_OUTPUT|_IN_OUT)?)(.*)$'
+        'beginCaptures':
+          '1':
+            'name': 'storage.type.variable.st'
+          '2':
+            'patterns': [
+              {
+                'include': '#comment'
+              }
+            ]
+        'end': '(?i)\\s*(END_VAR)(.*)$'
+        'endCaptures':
+          '1':
+            'name': 'storage.type.variable.st'
+          '2':
+            'patterns': [
+              {
+                'include': '#comment'
+              }
+            ]
+        'name': 'meta.declaration.st'
+        'patterns': [
+          'include': '$self'
+        ]
+      }
+    ]
+
+  'statements':
+    'patterns': [
+      {
+        'match': '(?i)\\b(PROGRAM|IF|THEN|ELSIF|ELSE|CASE|OF|FOR|TO|BY|WHILE|DO|REPEAT|UNTIL|CONTINUE|EXIT|GOTO|RETURN|END_(PROGRAM|IF|CASE|FOR|WHILE|REPEAT))\\b'
+        'name': 'keyword.control.st'
+      }
+    ]
+
+  'types':
+    'patterns': [
+      {
+        'match': '(?i)\\b(BOOL|BYTE|WORD|DWORD|CHAR|INT|DINT|REAL|S5TIME|TIME|DATE|TIME_OF_DAY|DATE_AND_TIME|STRING|ARRAY|STRUCT|TIMER|COUNTER|BLOCK_(FB|FC|DB|SDB)|ANY|POINTER)\\b'
+        'name': 'storage.type.st'
+      }
+    ]
+
+  'constants':
+    'patterns': [
+      {
+        'match': '\\W((2#[0-1]+[0-1_]*)|(16#[0-9A-F]+[0-9A-F_]*)|(8#[0-8]+[0-8_]*))\\W'
+        'name': 'constant.numeric.st'
+      }
+      {
+        'match': '(?i)\\W((([+-]?[0-9]+[0-9_]*)(\\.[0-9]+[0-9_]*)?)(E[+-]?[0-9]+[0-9_]*)?)\\W'
+        'name': 'constant.numeric.st'
+      }
+    ]
+
+  'string':
+    'patterns': [
+      {
+        'begin': '\''
+        'end': '\''
+        'name': 'string.quoted.single.krl'
+      }
+    ]
